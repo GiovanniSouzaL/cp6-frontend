@@ -2,7 +2,6 @@ import type { Jogo } from "../types";
 
 type CardJogoProps = {
   jogo: Jogo;
-  // quando não existe onDesejo (ex.: Home), o botão de desejos não aparece
   desejado?: boolean;
   onDesejo?: (jogoId: string) => void;
 };

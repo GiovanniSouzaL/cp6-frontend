@@ -6,116 +6,108 @@
       "email": "admin@admin.com",
       "senha": 123,
       "desejos": []
-    },
-    {
-      "nome": "giovanni",
-      "email": "giovanni@email.com",
-      "senha": "123",
-      "desejos": [],
-      "id": "ga3LZ2FIfIk"
     }
   ],
   "jogos": [
     {
       "id": "1",
-      "titulo": "Dragon Realm Legends",
-      "genero": "RPG",
-      "preco": 199.9,
-      "promocao": true,
-      "imagem": "/capas/jogo1.svg",
-      "precoPromocional": 129.9
+      "titulo": "Stardew Valley",
+      "genero": "Simulação",
+      "preco": 24.99,
+      "promocao": false,
+      "imagem": "/capas\\Stardew_Valley.png"
     },
     {
       "id": "2",
-      "titulo": "Neon Racer 2077",
+      "titulo": "Forza Horizon 6",
       "genero": "Corrida",
-      "preco": 149.9,
-      "promocao": true,
-      "imagem": "/capas/jogo2.svg",
-      "precoPromocional": 74.95
+      "preco": 299,
+      "promocao": false,
+      "imagem": "/capas\\Forza_Horizon_6.jpg"
     },
     {
       "id": "3",
-      "titulo": "Last Colony",
-      "genero": "Sobrevivência",
-      "preco": 129.9,
+      "titulo": "The Witcher 3: Wild Hunt — Remastered",
+      "genero": "RPG",
+      "preco": 159.99,
       "promocao": true,
-      "imagem": "/capas/jogo3.svg",
-      "precoPromocional": 64.9
+      "precoPromocional": 79.99,
+      "imagem": "/capas\\the-witcher-3-wild-hunt-remastered.jpg"
     },
     {
       "id": "4",
-      "titulo": "Cyber Strike Arena",
-      "genero": "Tiro",
-      "preco": 179.9,
-      "promocao": true,
-      "imagem": "/capas/jogo4.svg",
-      "precoPromocional": 99.9
+      "titulo": "Hollow Knight",
+      "genero": "Metroidvania",
+      "preco": 46.99,
+      "promocao": false,
+      "imagem": "/capas\\hollow-knight.jpg"
     },
     {
       "id": "5",
-      "titulo": "Pixel Kingdom",
-      "genero": "Aventura",
-      "preco": 79.9,
+      "titulo": "Hollow Knight: Silksong",
+      "genero": "Metroidvania",
+      "preco": 59.99,
       "promocao": false,
-      "imagem": "/capas/jogo5.svg"
+      "imagem": "/capas\\Hollow_Knight_Silksong.jpeg"
     },
     {
       "id": "6",
-      "titulo": "Galactic Commanders",
-      "genero": "Estratégia",
-      "preco": 119.9,
+      "titulo": "Hades",
+      "genero": "Roguelike",
+      "preco": 73.99,
       "promocao": false,
-      "imagem": "/capas/jogo6.svg"
+      "imagem": "/capas\\Hades_capa.jpg"
     },
     {
       "id": "7",
-      "titulo": "Fútbol Pro 26",
-      "genero": "Esportes",
-      "preco": 249.9,
+      "titulo": "Terraria",
+      "genero": "Sandbox",
+      "preco": 32.99,
       "promocao": false,
-      "imagem": "/capas/jogo7.svg"
+      "imagem": "/capas\\terraria.jpg"
     },
     {
       "id": "8",
-      "titulo": "Shadow Ninja",
-      "genero": "Ação",
-      "preco": 99.9,
+      "titulo": "Cyberpunk 2077",
+      "genero": "RPG",
+      "preco": 199.9,
       "promocao": true,
-      "imagem": "/capas/jogo8.svg",
-      "precoPromocional": 59.9
+      "precoPromocional": 59.97,
+      "imagem": "/capas\\cyberpunk.jpg"
     },
     {
       "id": "9",
-      "titulo": "Farm Valley Dreams",
-      "genero": "Simulação",
-      "preco": 59.9,
+      "titulo": "Elden Ring",
+      "genero": "Ação RPG",
+      "preco": 274.5,
       "promocao": false,
-      "imagem": "/capas/jogo9.svg"
+      "imagem": "/capas\\elden-ring.jpg"
     },
     {
       "id": "10",
-      "titulo": "Ocean Depths",
-      "genero": "Exploração",
-      "preco": 89.9,
-      "promocao": false,
-      "imagem": "/capas/jogo10.svg"
+      "titulo": "Red Dead Redemption 2",
+      "genero": "Ação e Aventura",
+      "preco": 299.9,
+      "promocao": true,
+      "precoPromocional": 74.97,
+      "imagem": "/capas\\red-dead-redemption-2.jpg"
     },
     {
       "id": "11",
-      "titulo": "Mystic Puzzle Tower",
-      "genero": "Puzzle",
-      "preco": 39.9,
-      "promocao": false,
-      "imagem": "/capas/jogo11.svg"
+      "titulo": "Resident Evil 4",
+      "genero": "Terror",
+      "preco": 169,
+      "promocao": true,
+      "precoPromocional": 42.25,
+      "imagem": "/capas\\Resident_Evil_4_(remake).png"
     },
     {
       "id": "12",
-      "titulo": "Zombie Highway",
-      "genero": "Horror",
-      "preco": 109.9,
+      "titulo": "EA SPORTS FC 27",
+      "genero": "Esportes",
+      "preco": 125,
       "promocao": false,
-      "imagem": "/capas/jogo12.svg"
+      "imagem": "/capas\\eafc27.jpg"
     }
   ]
 }

@@ -1,0 +1,114 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@admin.com",
+      "senha": 123,
+      "desejos": []
+    }
+  ],
+  "jogos": [
+    {
+      "id": "1",
+      "titulo": "Dragon Realm Legends",
+      "genero": "RPG",
+      "preco": 199.9,
+      "promocao": true,
+      "imagem": "/capas/jogo1.svg",
+      "precoPromocional": 129.9
+    },
+    {
+      "id": "2",
+      "titulo": "Neon Racer 2077",
+      "genero": "Corrida",
+      "preco": 149.9,
+      "promocao": true,
+      "imagem": "/capas/jogo2.svg",
+      "precoPromocional": 74.95
+    },
+    {
+      "id": "3",
+      "titulo": "Last Colony",
+      "genero": "Sobrevivência",
+      "preco": 129.9,
+      "promocao": true,
+      "imagem": "/capas/jogo3.svg",
+      "precoPromocional": 64.9
+    },
+    {
+      "id": "4",
+      "titulo": "Cyber Strike Arena",
+      "genero": "Tiro",
+      "preco": 179.9,
+      "promocao": true,
+      "imagem": "/capas/jogo4.svg",
+      "precoPromocional": 99.9
+    },
+    {
+      "id": "5",
+      "titulo": "Pixel Kingdom",
+      "genero": "Aventura",
+      "preco": 79.9,
+      "promocao": false,
+      "imagem": "/capas/jogo5.svg"
+    },
+    {
+      "id": "6",
+      "titulo": "Galactic Commanders",
+      "genero": "Estratégia",
+      "preco": 119.9,
+      "promocao": false,
+      "imagem": "/capas/jogo6.svg"
+    },
+    {
+      "id": "7",
+      "titulo": "Fútbol Pro 26",
+      "genero": "Esportes",
+      "preco": 249.9,
+      "promocao": false,
+      "imagem": "/capas/jogo7.svg"
+    },
+    {
+      "id": "8",
+      "titulo": "Shadow Ninja",
+      "genero": "Ação",
+      "preco": 99.9,
+      "promocao": true,
+      "imagem": "/capas/jogo8.svg",
+      "precoPromocional": 59.9
+    },
+    {
+      "id": "9",
+      "titulo": "Farm Valley Dreams",
+      "genero": "Simulação",
+      "preco": 59.9,
+      "promocao": false,
+      "imagem": "/capas/jogo9.svg"
+    },
+    {
+      "id": "10",
+      "titulo": "Ocean Depths",
+      "genero": "Exploração",
+      "preco": 89.9,
+      "promocao": false,
+      "imagem": "/capas/jogo10.svg"
+    },
+    {
+      "id": "11",
+      "titulo": "Mystic Puzzle Tower",
+      "genero": "Puzzle",
+      "preco": 39.9,
+      "promocao": false,
+      "imagem": "/capas/jogo11.svg"
+    },
+    {
+      "id": "12",
+      "titulo": "Zombie Highway",
+      "genero": "Horror",
+      "preco": 109.9,
+      "promocao": false,
+      "imagem": "/capas/jogo12.svg"
+    }
+  ]
+}

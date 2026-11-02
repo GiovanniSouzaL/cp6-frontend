@@ -10,7 +10,7 @@ const integrantes: Integrante[] = [
   {
     nome: "Giovanni de Souza Lima",
     rm: "556536",
-    foto: "/fotos/giovanni.jpg",
+    foto: "/integrantes/giovanni.jpg",
     linkedin: "https://www.linkedin.com/in/giovanni-de-souza-lima-2770943b5/",
     github: "https://github.com/GiovanniSouzaL",
   },

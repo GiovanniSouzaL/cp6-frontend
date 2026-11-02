@@ -7,7 +7,7 @@ import { API_URL } from "../api";
 import type { Jogo } from "../types";
 
 export default function Home() {
-  const { signed, user } = useAuth();
+  const { signed, user, toggleDesejo } = useAuth();
   const { abrirLogin, abrirCadastro } = useModal();
 
   const [promocoes, setPromocoes] = useState<Jogo[]>([]);
@@ -21,16 +21,17 @@ export default function Home() {
         setPromocoes(data);
       } catch (error) {
         console.error("Erro ao buscar promoções", error);
-        setErro("Não foi possível carregar as promoções. O json-server está rodando? (npm run backend)");
+        setErro("Erro ao carregar as promoções.");
       }
     };
 
     carregarPromocoes();
   }, []);
 
+  const desejos = user?.desejos ?? [];
+
   return (
     <div className="max-w-6xl mx-auto px-4">
-      {/* Apresentação da loja */}
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
           Bem-vindo à <span className="text-pink-600">Loja de Games</span>
@@ -74,17 +75,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner de promoções */}
       <section
         aria-label="Banner de promoções"
         className="rounded-2xl bg-pink-600 text-white text-center py-12 px-6 shadow-lg"
       >
         <p className="uppercase tracking-widest text-sm font-semibold">Semana dos Games</p>
         <h2 className="text-3xl md:text-5xl font-extrabold mt-2">Super Promoção</h2>
-        <p className="mt-3 text-lg">Até 50% de desconto em jogos selecionados. Aproveite antes que acabe!</p>
+        <p className="mt-3 text-lg">Até 75% de desconto em jogos selecionados. Aproveite antes que acabe!</p>
       </section>
 
-      {/* Área de promoções */}
       <section className="py-10" aria-labelledby="titulo-promocoes">
         <h2 id="titulo-promocoes" className="text-2xl font-bold text-gray-900 mb-6">
           Jogos em super promoção
@@ -94,7 +93,12 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {promocoes.map((jogo) => (
-            <CardJogo key={jogo.id} jogo={jogo} />
+            <CardJogo
+              key={jogo.id}
+              jogo={jogo}
+              desejado={desejos.includes(jogo.id)}
+              onDesejo={signed ? toggleDesejo : abrirLogin}
+            />
           ))}
         </div>
       </section>

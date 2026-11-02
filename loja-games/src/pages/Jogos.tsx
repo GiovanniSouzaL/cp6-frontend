@@ -18,7 +18,7 @@ export default function Jogos() {
         setJogos(data);
       } catch (error) {
         console.error("Erro ao buscar jogos", error);
-        setErro("Não foi possível carregar os jogos. O json-server está rodando? (npm run backend)");
+        setErro("Erro ao carregar os jogos.");
       }
     };
 
@@ -66,15 +66,21 @@ export default function Jogos() {
         )}
       </section>
 
-      <section aria-label="Todos os jogos" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {jogos.map((jogo) => (
-          <CardJogo
-            key={jogo.id}
-            jogo={jogo}
-            desejado={desejos.includes(jogo.id)}
-            onDesejo={toggleDesejo}
-          />
-        ))}
+      <section aria-labelledby="titulo-jogos">
+        <h2 id="titulo-jogos" className="text-xl font-bold text-gray-900 mb-4">
+          Todos os jogos
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {jogos.map((jogo) => (
+            <CardJogo
+              key={jogo.id}
+              jogo={jogo}
+              desejado={desejos.includes(jogo.id)}
+              onDesejo={toggleDesejo}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );

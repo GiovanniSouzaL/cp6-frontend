@@ -6,6 +6,13 @@
       "email": "admin@admin.com",
       "senha": 123,
       "desejos": []
+    },
+    {
+      "nome": "giovanni",
+      "email": "giovanni@email.com",
+      "senha": "123",
+      "desejos": [],
+      "id": "ga3LZ2FIfIk"
     }
   ],
   "jogos": [
@@ -110,5 +117,6 @@
       "promocao": false,
       "imagem": "/capas/jogo12.svg"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

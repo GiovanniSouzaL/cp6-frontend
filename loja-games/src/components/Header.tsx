@@ -6,6 +6,13 @@ export default function Header() {
   const { signed, user, signout } = useAuth();
   const { abrirLogin, abrirCadastro } = useModal();
 
+  const handleJogos = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!signed) {
+      e.preventDefault();
+      abrirLogin();
+    }
+  };
+
   return (
     <header className="bg-gray-900 text-white shadow-lg sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
@@ -15,9 +22,7 @@ export default function Header() {
 
         <nav aria-label="Menu principal" className="flex items-center gap-5">
           <Link to="/" className="hover:text-pink-400">Home</Link>
-          <Link to="/jogos" className="hover:text-pink-400">
-            Jogos{!signed && <span aria-label="exige login"> 🔒</span>}
-          </Link>
+          <Link to="/jogos" onClick={handleJogos} className="hover:text-pink-400">Jogos</Link>
           <Link to="/sobre" className="hover:text-pink-400">Sobre</Link>
         </nav>
 

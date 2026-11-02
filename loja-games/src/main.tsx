@@ -24,7 +24,7 @@ const Private = ({ Item }: PrivateProps) => {
     return <p className="text-center text-gray-600 py-20">Carregando...</p>
   }
 
-  return signed ? <Item /> : <Navigate to="/" />
+  return signed ? <Item /> : <Navigate to="/" replace />
 }
 
 const router = createBrowserRouter([

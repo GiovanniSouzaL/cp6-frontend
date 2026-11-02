@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState, useCallback, useRef } from "react";
+import { createContext, useEffect, useState, useCallback } from "react";
 import type { ReactNode } from "react";
 import type { User } from "../types";
 import { API_URL } from "../api";
@@ -16,16 +16,13 @@ type AuthContextType = {
 type AuthProviderProps = {
   children: ReactNode;
 };
+
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const desejosRef = useRef<string[]>([]);
 
-  useEffect(() => {
-    desejosRef.current = user?.desejos ?? [];
-  }, [user]);
   useEffect(() => {
     const loadUserFromAPI = async () => {
       const userToken = localStorage.getItem("user_token");
@@ -48,6 +45,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     loadUserFromAPI();
   }, []);
+
   const signup = useCallback(
     async (nome: string, email: string, password: string): Promise<string | void> => {
       try {
@@ -57,6 +55,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         if (users.length > 0) {
           return "Já existe uma conta com este e-mail";
         }
+
         await fetch(`${API_URL}/user`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -98,32 +97,31 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     },
     []
   );
+
   const signout = useCallback(() => {
     setUser(null);
     localStorage.removeItem("user_token");
   }, []);
+
   const toggleDesejo = useCallback(
     async (jogoId: string): Promise<void> => {
       if (!user || !user.id) return;
 
-      const atuais = desejosRef.current;
+      const atuais = user.desejos ?? [];
       const novos = atuais.includes(jogoId)
         ? atuais.filter((id) => id !== jogoId)
         : [...atuais, jogoId];
 
-      desejosRef.current = novos;
-      setUser((prev) => (prev ? { ...prev, desejos: novos } : prev));
-
       try {
-        await fetch(`${API_URL}/user/${user.id}`, {
+        const response = await fetch(`${API_URL}/user/${user.id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ desejos: novos }),
         });
+        const atualizado: User = await response.json();
+        setUser(atualizado);
       } catch (error) {
         console.log(error);
-        desejosRef.current = atuais;
-        setUser((prev) => (prev ? { ...prev, desejos: atuais } : prev));
       }
     },
     [user]
